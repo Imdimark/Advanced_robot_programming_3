@@ -1,0 +1,7 @@
+#! /bin/bash
+	
+	cd ARP_headers/ 
+	make
+	make #make is made twice because it happened that sometimes only once is not enough
+	cd ..
+	gcc -I./ARP_headers -L./ARP_headers -o my_code my_code.c -larpnet
